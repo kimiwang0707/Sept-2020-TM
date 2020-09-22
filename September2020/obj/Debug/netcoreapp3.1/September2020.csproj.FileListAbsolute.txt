@@ -1,0 +1,16 @@
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/bin/Debug/netcoreapp3.1/September2020.deps.json
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/bin/Debug/netcoreapp3.1/September2020.runtimeconfig.json
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/bin/Debug/netcoreapp3.1/September2020.runtimeconfig.dev.json
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/bin/Debug/netcoreapp3.1/September2020.dll
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/bin/Debug/netcoreapp3.1/September2020.pdb
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/bin/Debug/netcoreapp3.1/WebDriver.Support.dll
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/bin/Debug/netcoreapp3.1/WebDriver.dll
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/obj/Debug/netcoreapp3.1/September2020.csprojAssemblyReference.cache
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/obj/Debug/netcoreapp3.1/September2020.AssemblyInfoInputs.cache
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/obj/Debug/netcoreapp3.1/September2020.AssemblyInfo.cs
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/obj/Debug/netcoreapp3.1/September2020.csproj.CoreCompileInputs.cache
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/obj/Debug/netcoreapp3.1/September2020.csproj.CopyComplete
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/obj/Debug/netcoreapp3.1/September2020.dll
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/obj/Debug/netcoreapp3.1/September2020.pdb
+/Users/kimiwang/Desktop/IndustryConnect2020/September2020/September2020/obj/Debug/netcoreapp3.1/September2020.genruntimeconfig.cache
