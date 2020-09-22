@@ -1,22 +1,27 @@
 ﻿<Properties StartupConfiguration="{159E1A0D-8B07-4E3A-B7BC-1DB96BF802E5}|Default">
   <MonoDevelop.Ide.ItemProperties.September2020 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="September2020/Pages/TMPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="September2020/Test/Program.cs">
     <Files>
-      <File FileName="September2020/Pages/LoginPage.cs" Line="31" Column="1" />
-      <File FileName="September2020/Pages/TMPage.cs" Line="101" Column="1" />
-      <File FileName="September2020/Test/Program.cs" />
+      <File FileName="September2020/Pages/LoginPage.cs" Line="16" Column="12" />
+      <File FileName="September2020/Pages/TMPage.cs" />
+      <File FileName="September2020/Test/Program.cs" Line="5" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="September2020" expanded="True">
             <Node name="September2020" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="TMPage.cs" selected="True" />
+              <Node name="Pages" expanded="True" />
+              <Node name="Test" expanded="True">
+                <Node name="Program.cs" selected="True" />
               </Node>
-              <Node name="Test" expanded="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="September2020" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

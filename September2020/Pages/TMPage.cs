@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 
 namespace September2020.Pages
 {
-    public class TMPage
+    class TMPage
     {
 
         //***Test Create Time Record***

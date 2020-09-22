@@ -4,11 +4,11 @@ using OpenQA.Selenium.Chrome;
 
 namespace September2020.Pages
 {
-    public class LoginPage
+    class LoginPage
     {
         public void LoginSteps(IWebDriver driver)
         {
-            // test
+            // GitHub Test!
             //Lauch browser and enter the URL
             driver.Navigate().GoToUrl("http://horse.industryconnect.io/Account/Login?ReturnUrl=%2f");
 
