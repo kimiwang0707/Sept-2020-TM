@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kimiwang/Desktop/Git/September2020 copy/September2020/September2020.csproj": {}
+    "/Users/kimiwang/Desktop/Git/September2020_Test/September2020/September2020.csproj": {}
   },
   "projects": {
-    "/Users/kimiwang/Desktop/Git/September2020 copy/September2020/September2020.csproj": {
+    "/Users/kimiwang/Desktop/Git/September2020_Test/September2020/September2020.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kimiwang/Desktop/Git/September2020 copy/September2020/September2020.csproj",
+        "projectUniqueName": "/Users/kimiwang/Desktop/Git/September2020_Test/September2020/September2020.csproj",
         "projectName": "September2020",
-        "projectPath": "/Users/kimiwang/Desktop/Git/September2020 copy/September2020/September2020.csproj",
+        "projectPath": "/Users/kimiwang/Desktop/Git/September2020_Test/September2020/September2020.csproj",
         "packagesPath": "/Users/kimiwang/.nuget/packages/",
-        "outputPath": "/Users/kimiwang/Desktop/Git/September2020 copy/September2020/obj/",
+        "outputPath": "/Users/kimiwang/Desktop/Git/September2020_Test/September2020/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kimiwang/.config/NuGet/NuGet.Config"

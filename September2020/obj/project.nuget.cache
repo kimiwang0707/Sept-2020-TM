@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KSL1hFAhrDAQvXssEYCkB8vi70kPJ9HICIql/EoelWoyWgP/8auvkAR5OCN1bVXHmMbNA2fjLgGzOR+z/VSfVQ==",
+  "dgSpecHash": "4taEfvPQVGv018eviDLyu4q9zTqw2BpPiSeCZEIQURQMGnddsKHPMHpZjse0He7rNNG/gTNPGQDxpuwAyP6jVg==",
   "success": true,
-  "projectFilePath": "/Users/kimiwang/Desktop/Git/September2020 copy/September2020/September2020.csproj",
+  "projectFilePath": "/Users/kimiwang/Desktop/Git/September2020_Test/September2020/September2020.csproj",
   "expectedPackageFiles": [
     "/Users/kimiwang/.nuget/packages/microsoft.csharp/4.3.0/microsoft.csharp.4.3.0.nupkg.sha512",
     "/Users/kimiwang/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
