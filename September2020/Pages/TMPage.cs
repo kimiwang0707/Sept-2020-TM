@@ -11,6 +11,7 @@ namespace September2020.Pages
 
         public void CreateTM(IWebDriver driver)
         {
+            //GitHub Test!
             // Define an action for waiting the browser syncronization
             void wait()
             {
@@ -75,6 +76,8 @@ namespace September2020.Pages
 
         public void EditTM(IWebDriver driver)
         {
+            // add a comment
+
             // Define an action for waiting the browser syncronization
             void wait()
             {
