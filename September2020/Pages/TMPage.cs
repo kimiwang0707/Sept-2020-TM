@@ -18,15 +18,6 @@ namespace September2020.Pages
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             }
 
-            // Click Administration
-            IWebElement Administrator = driver.FindElement(By.XPath("/html/body/div[3]/div/div/ul/li[5]/a"));
-            Administrator.Click();
-
-            // Click Time&Material in dropdown menu
-            IWebElement TimeMaterial = driver.FindElement(By.XPath("/html/body/div[3]/div/div/ul/li[5]/ul/li[3]/a"));
-            TimeMaterial.Click();
-            wait();
-
             // Click Create New
             IWebElement CreateNew = driver.FindElement(By.XPath("//*[@id='container']/p/a"));
             CreateNew.Click();
@@ -76,26 +67,17 @@ namespace September2020.Pages
 
         public void EditTM(IWebDriver driver)
         {
-            // add a comment
-
-            // Define an action for waiting the browser syncronization
-            void wait()
-            {
-                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
-            }
-
-            // Click to go to the last page
-            driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[4]/a[4]")).Click();
-            wait();
+            // wait syncroniztion
+            Thread.Sleep(1500);
 
             // Choose one item to click edit
             IWebElement Edit1 = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[1]/td[5]/a[1]"));
             Edit1.Click();
-            wait();
+            Thread.Sleep(1500);
 
             // Modify the info
             driver.FindElement(By.Id("Code")).Clear();
-            driver.FindElement(By.Id("Code")).SendKeys("Eskimo 12:40");
+            driver.FindElement(By.Id("Code")).SendKeys("Eskimo 12:20");
             driver.FindElement(By.Id("Description")).Clear();
             driver.FindElement(By.Id("Description")).SendKeys("Eskimo is coming on Sept!");
 
@@ -103,14 +85,10 @@ namespace September2020.Pages
             driver.FindElement(By.Id("SaveButton")).Click();
             Thread.Sleep(2000);
 
-            // Click to go to last page
-            driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[4]/a[4]")).Click();
-            Thread.Sleep(1500);
-
             // Validate if the value is changed
             IWebElement UpdatedCode = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[1]/td[1]"));
 
-            if (UpdatedCode.Text == "Eskimo 12:40")
+            if (UpdatedCode.Text == "Eskimo 12:20")
             {
                 Console.WriteLine("Edit succesfully!");
             }
@@ -128,6 +106,7 @@ namespace September2020.Pages
         public void DeleteTM(IWebDriver driver)
         {
             // Click one item to Delete
+            Thread.Sleep(1500);
             var CodeDelete = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[1]/td[1]")).Text;
             driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[1]/td[5]/a[2]")).Click();
 
@@ -152,11 +131,8 @@ namespace September2020.Pages
 
             // Click OK to confirm to delete
 
-            // Go to previous page
-            driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[4]/a[2]/span")).Click();
-            Thread.Sleep(1000);
-
             // Check the next record below the target delete item
+            Thread.Sleep(1000);
             var CodeDeleteNext = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[2]/td[1]")).Text;
 
             // Click Delete to delete the 1st record

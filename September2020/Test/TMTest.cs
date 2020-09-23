@@ -2,29 +2,16 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using September2020.Helpers;
 using September2020.Pages;
 
 namespace September2020
 {
 
     [TestFixture]
-    class Program
+    [Parallelizable]
+    class TMTest : CommonDriver
     {
-        IWebDriver driver;
-
-        static void Main(string[] args)
-        {                
-        }
-
-        [SetUp]
-        public void LoginTurnUp()
-        {
-            //Initiate and define webdriver
-            driver = new ChromeDriver();
-
-            LoginPage loginObj = new LoginPage();
-            loginObj.LoginSteps(driver);
-        }
 
         [Test]
         public void CreateTMTest()
@@ -56,12 +43,7 @@ namespace September2020
             tmObj.DeleteTM(driver);
         }
 
-        [TearDown]
-        public void TestClosure()
-        {
-            //close instance of open chrome driver
-            driver.Quit();
-        }
+       
 
     }
 }
