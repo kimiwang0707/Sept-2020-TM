@@ -28,12 +28,18 @@ namespace September2020.Pages
             IWebElement loginButton = driver.FindElement(By.XPath("//*[@id='loginForm']/form/div[3]/input[1]"));
             loginButton.Click();
 
-            // Validate if the user is logged in succesfully
-            IWebElement hellohari = driver.FindElement(By.XPath("//*[@id='logoutForm']/ul/li/a"));
+            try
+            {
+                // Validate if the user is logged in succesfully
+                IWebElement hellohari = driver.FindElement(By.XPath("//*[@id='logoutForm']/ul/li/a"));
 
-            // Use assert syntax to judge if the program fail or pass
-            Assert.That(hellohari.Text, Is.EqualTo("Hello hari!"));
-
+                // Use assert syntax to judge if the program fail or pass
+                Assert.That(hellohari.Text, Is.EqualTo("Hello hari!"));
+            }
+            catch(Exception ex)
+            {
+                Assert.Fail("Test failed at login step!", ex.Message);
+            }
         }
     }
 }
