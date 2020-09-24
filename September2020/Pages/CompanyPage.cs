@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
+using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
 namespace September2020.Pages
 {
@@ -61,13 +61,10 @@ namespace September2020.Pages
 
             // validate if the company record is added to the list
             IWebElement lastItem = driver.FindElement(By.XPath("//*[@id='companiesGrid']/div[3]/table/tbody/tr[last()]/td[1]"));
-            if (lastItem.Text == "Super Star Company")
-            {
-                Console.WriteLine("Create company successfully");
-            }
-            else {
-                Console.WriteLine("Fail to create company!");
-            }
+
+            //Use Assert syntax to judge fail or pass
+            Assert.That(lastItem.Text, Is.EqualTo("Super Star Company"));
+            
         }
 
 
@@ -90,14 +87,10 @@ namespace September2020.Pages
 
             // Validate if the item was updated
             IWebElement FirstRowName = driver.FindElement(By.XPath("//*[@id='companiesGrid']/div[3]/table/tbody/tr[1]/td[1]"));
-            if (FirstRowName.Text == "Donald Trump")
-            {
-                Console.WriteLine("Edit company successfully");
-            }
-            else
-            {
-                Console.WriteLine("Fail to edit company!");
-            }
+
+            //Use Assert syntax to judge fail or pass
+            Assert.That(FirstRowName.Text, Is.EqualTo("Donald Trump"));
+            
         }
 
 
@@ -120,15 +113,12 @@ namespace September2020.Pages
                 driver.SwitchTo().Alert().Dismiss();
                 Thread.Sleep(1500);
 
+                // Locate the item deleted
                 IWebElement deleteItem = driver.FindElement(By.XPath("//*[@id='companiesGrid']/div[3]/table/tbody/tr[1]/td[1]"));
-                if (deleteItem.Text == FirstItemName.Text)
-                {
-                    Console.WriteLine("Cancel delete company successfully");
-                }
-                else
-                {
-                    Console.WriteLine("Fail to cancel delete company!");
-                }
+
+                // Use assert syntax to judge if pass of fail
+                Assert.That(deleteItem.Text, Is.EqualTo(FirstItemName.Text));
+                
 
                 // Validate the alert window with OK to delete
 
@@ -147,17 +137,10 @@ namespace September2020.Pages
                 // Validate if the second row change to first row
                 IWebElement FirstItemName1 = driver.FindElement(By.XPath("//*[@id='companiesGrid']/div[3]/table/tbody/tr[1]/td[1]"));
 
-                if (FirstItemName1.Text == SecondItemName.Text)
-                {
-                    Console.WriteLine("Delete company successfully");
-                }
-                else
-                {
-                    Console.WriteLine("Fail to delete company!");
-                }
+                Assert.That(FirstItemName1.Text, Is.EqualTo(SecondItemName.Text));             
 
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 Console.WriteLine("System failure to delete company!"); 
             }

@@ -1,6 +1,6 @@
 ﻿using System;
+using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
 namespace September2020.Pages
 {
@@ -31,15 +31,8 @@ namespace September2020.Pages
             // Validate if the user is logged in succesfully
             IWebElement hellohari = driver.FindElement(By.XPath("//*[@id='logoutForm']/ul/li/a"));
 
-            if (hellohari.Text == "Hello hari!")
-            {
-                Console.WriteLine("Logged in successfully. The test passed!");
-
-            }
-            else {
-
-                Console.WriteLine("Fail to login. Test failed!");
-            }
+            // Use assert syntax to judge if the program fail or pass
+            Assert.That(hellohari.Text, Is.EqualTo("Hello hari!"));
 
         }
     }

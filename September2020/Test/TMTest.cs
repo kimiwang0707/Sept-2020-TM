@@ -1,11 +1,9 @@
 ﻿using System;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using September2020.Helpers;
 using September2020.Pages;
 
-namespace September2020
+namespace September2020.Test
 {
 
     [TestFixture]

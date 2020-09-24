@@ -11,7 +11,7 @@ namespace September2020.Helpers
         // Then other class can call the element directly
         public static IWebDriver driver;
 
-        [SetUp]
+        [OneTimeSetUp]
         public void LoginTurnUp()
         {
             //Initiate and define webdriver
@@ -22,7 +22,7 @@ namespace September2020.Helpers
         }
 
 
-        [TearDown]
+        [OneTimeTearDown]
         public void TestClosure()
         {
             //close instance of open chrome driver

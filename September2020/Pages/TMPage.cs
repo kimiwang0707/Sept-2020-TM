@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using NUnit.Framework;
 using OpenQA.Selenium;
 
 namespace September2020.Pages
@@ -51,14 +52,10 @@ namespace September2020.Pages
             IWebElement expectedCode = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[1]"));
             IWebElement expectedDescription = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[3]"));
 
-            if (expectedCode.Text == "12:30" && expectedDescription.Text == "You have assignment due.")
-            {
-                Console.WriteLine("Time was added successfully!");
-            }
-            else
-            {
-                Console.WriteLine("Failure to add time record!");
-            }
+            // Use assert to judge fail or pass in tests
+            Assert.That(expectedCode.Text, Is.EqualTo("12:30"));
+            Assert.That(expectedDescription.Text, Is.EqualTo("You have assignment due."));
+           
         }
 
 
@@ -88,14 +85,10 @@ namespace September2020.Pages
             // Validate if the value is changed
             IWebElement UpdatedCode = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[1]/td[1]"));
 
-            if (UpdatedCode.Text == "Eskimo 12:20")
-            {
-                Console.WriteLine("Edit succesfully!");
-            }
-            else
-            {
-                Console.WriteLine("Failure to Edit!");
-            }
+            // Use assert syntax to judge fail or pass in tests
+            Assert.That(UpdatedCode.Text, Is.EqualTo("Eskimo 12:20"));
+
+          
 
         }
 
@@ -118,14 +111,10 @@ namespace September2020.Pages
             Thread.Sleep(500);
             IWebElement ExpectedCode = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[1]/td[1]"));
 
-            if (ExpectedCode.Text == CodeDelete)
-            {
-                Console.WriteLine("Delete was cancelled successfully!");
-            }
-            else
-            {
-                Console.WriteLine("Alert message test failed!");
-            }
+            // Use assert syntax to judge fail or pass in tests
+            Assert.That(ExpectedCode.Text, Is.EqualTo(CodeDelete));
+
+         
 
 
 
@@ -143,23 +132,12 @@ namespace September2020.Pages
 
             // Validate if ther record has been deleted
             IWebElement ExpectedFirstRowCode = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[1]/td[1]"));
-            if (ExpectedFirstRowCode.Text == CodeDeleteNext)
-            {
-                Console.WriteLine("Delete successfully!");
-            }
-            else {
-                Console.WriteLine("Fail to Delete!");
-            }
-           
+
+            // Use assert syntax to judge fail or pass in tests
+            Assert.That(ExpectedFirstRowCode.Text, Is.EqualTo(CodeDeleteNext));
+
 
         }
-
-
-
-
-
-
-
 
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using NUnit.Framework;
-using OpenQA.Selenium;
+﻿using NUnit.Framework;
 using September2020.Pages;
-using OpenQA.Selenium.Chrome;
 using September2020.Helpers;
 
 namespace September2020.Test
