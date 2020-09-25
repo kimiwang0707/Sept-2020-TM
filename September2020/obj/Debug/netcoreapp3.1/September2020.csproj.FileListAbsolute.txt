@@ -113,3 +113,4 @@
 /Users/kimiwang/Desktop/Git/September2020_Test/September2020/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 /Users/kimiwang/Desktop/Git/September2020_Test/September2020/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 /Users/kimiwang/Desktop/Git/September2020_Test/September2020/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+/Users/kimiwang/Desktop/Git/September2020_Test/September2020/bin/Debug/netcoreapp3.1/SeleniumExtras.WaitHelpers.dll

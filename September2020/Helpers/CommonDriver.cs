@@ -11,6 +11,7 @@ namespace September2020.Helpers
         // Then other class can call the element directly
         public static IWebDriver driver;
 
+        // Set OneTimeSetUp to allow login operation only once
         [OneTimeSetUp]
         public void LoginTurnUp()
         {
@@ -21,12 +22,16 @@ namespace September2020.Helpers
             loginObj.LoginSteps(driver);
         }
 
-
+        // Set OneTimeTearDown to allow quit operation only once
         [OneTimeTearDown]
         public void TestClosure()
         {
             //close instance of open chrome driver
             driver.Quit();
         }
+
+
+
+
     }
 }
