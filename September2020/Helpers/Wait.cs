@@ -7,7 +7,7 @@ namespace September2020.Helpers
 {
     class Wait
     {
-        
+        // Write wait syntax for Element EXIST condition.
         public static void WaitForElement(IWebDriver driver, string key, string value)
         {
             try
@@ -36,7 +36,7 @@ namespace September2020.Helpers
 
 
 
-        // Can set waiting time in this constructor
+        // Write wait syntax for Element VISIBLE condition (Can set waiting time in this constructor)
         public static void WaitForElementVisibility(IWebDriver driver, string key, string value, int seconds)
         {
             try
@@ -65,6 +65,32 @@ namespace September2020.Helpers
 
         }
 
+
+        // Write wait syntax for Element CLICKABLE condition
+        public static void WaitForElementClickable(IWebDriver driver, string key, string value)
+        {
+            var wait = new WebDriverWait(driver, new TimeSpan(0, 0, 5));
+
+            try
+            {
+                if (key == "XPath")
+                {
+                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(value)));
+                }
+                if (key == "Id")
+                {
+                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id(value)));
+                }
+                if (key == "CssSelector")
+                {
+                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.CssSelector(value)));
+                }
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail("Element failed to be clickable!", ex.Message);
+            }
+        }
 
     }
 }
