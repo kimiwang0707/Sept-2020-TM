@@ -40,7 +40,7 @@ namespace September2020.Pages
                 IWebElement Save = driver.FindElement(By.Id("SaveButton"));
                 Save.Click();
 
-                // Go to last page
+                // Go to the last page
                 // Because the data grid load more slowly than page switch bar, so use the data grid as the benchmark.
                 Wait.WaitForElementVisibility(driver, "XPath", "//*[@id='tmsGrid']/div[3]/table/tbody/tr[1]/td[1]", 5);
                 driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[4]/a[4]")).Click();

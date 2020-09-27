@@ -148,7 +148,7 @@ namespace September2020.Pages
                 driver.SwitchTo().Alert().Accept();
 
                 // Validate if the second row change to first row
-                // Cannot use ----Wait.WaitForElement(driver, "XPath", "//*[@id='companiesGrid']/div[3]/table/tbody/tr[1]/td[1]");
+                // Cannot use - Wait.WaitForElement(driver, "XPath", "//*[@id='companiesGrid']/div[3]/table/tbody/tr[1]/td[1]");
                 Thread.Sleep(1500);
                 var FirstItemName1 = driver.FindElement(By.XPath("//*[@id='companiesGrid']/div[3]/table/tbody/tr[1]/td[1]")).Text;
 
