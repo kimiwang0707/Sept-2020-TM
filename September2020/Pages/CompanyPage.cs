@@ -147,8 +147,8 @@ namespace September2020.Pages
                 Thread.Sleep(500);
                 driver.SwitchTo().Alert().Accept();
 
-                // Validate if the second row change to first row
-                // Cannot use - Wait.WaitForElement(driver, "XPath", "//*[@id='companiesGrid']/div[3]/table/tbody/tr[1]/td[1]");
+                // Validate if the second row was moved to first row
+                // Should use sleep here, because after popup close, the instant of the page is still previous which item hasn't been deleted.
                 Thread.Sleep(1500);
                 var FirstItemName1 = driver.FindElement(By.XPath("//*[@id='companiesGrid']/div[3]/table/tbody/tr[1]/td[1]")).Text;
 
